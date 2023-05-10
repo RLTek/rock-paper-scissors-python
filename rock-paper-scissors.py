@@ -11,7 +11,7 @@ def play_game():
 
     #prints the choices for the computer and player and reminds the player to choose rock, paper or scissors if they choose somethign else
     if player_choice.lower() != 'rock' and player_choice != 'paper' and player_choice != 'scissors':
-        print('Please choose rock, paper or scissors.')
+        print('Invalid choice. Please try again and choose rock, paper or scissors.')
     else:
         print('You chose ' + player_choice.lower())
         print('Computron chose ' + computer_choice)
