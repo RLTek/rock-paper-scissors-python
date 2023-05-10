@@ -1,16 +1,17 @@
 #A rock paper scissors game to help learn Python
 import random
 
+#Get the player choice
 player_choice =  str(input("Choose rock, paper or scissors")).strip().lower()
 
 def play_game():
 
     #lists the choices for the computer and picks a random one
-    computer_choices = ['rock', 'paper', 'scissors']
-    computer_choice = random.choice(computer_choices)
+    valid_choices = ['rock', 'paper', 'scissors']
+    computer_choice = random.choice(valid_choices)
 
-    #prints the choices for the computer and player and reminds the player to choose rock, paper or scissors if they choose somethign else
-    if player_choice != 'rock' and player_choice != 'paper' and player_choice != 'scissors':
+    #prints the choices for the computer and player and reminds the player to choose rock, paper or scissors if they choose something else
+    if player_choice not in valid_choices:
         print('Invalid choice. Please try again and choose rock, paper or scissors.')
     else:
         print('You chose ' + player_choice.lower())
